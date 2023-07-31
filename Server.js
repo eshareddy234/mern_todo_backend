@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors(
     {
-        origin: ["https://esha-mern-todo.vercel.app"],
+        origin: ["http://esha-mern-todo.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
     }

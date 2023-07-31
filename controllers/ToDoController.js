@@ -2,12 +2,24 @@ const ToDoModel = require("../models/ToDoModel");
 
 module.exports.getToDo = async (req, res) => {
     console.log("hiiiiii")
+    res.setHeader("Access-Control-Allow-Origin", "*");  
+    res.setHeader(  
+  "Access-Control-Allow-Headers",  
+  "Origin, X-Requested-With, Content-Type, Accept");  
+res.setHeader("Access-Control-Allow-Methods",  
+    "GET, POST, PATCH, DELETE, OPTIONS");  
     const todo = await ToDoModel.find();
     res.send(todo);
     
 }
 
 module.exports.saveToDo = (req, res) => {
+        res.setHeader("Access-Control-Allow-Origin", "*");  
+    res.setHeader(  
+  "Access-Control-Allow-Headers",  
+  "Origin, X-Requested-With, Content-Type, Accept");  
+res.setHeader("Access-Control-Allow-Methods",  
+    "GET, POST, PATCH, DELETE, OPTIONS");  
     const { text } = req.body;
 
     ToDoModel
@@ -21,6 +33,12 @@ module.exports.saveToDo = (req, res) => {
 }
 
 module.exports.deleteToDo = (req, res) => {
+        res.setHeader("Access-Control-Allow-Origin", "*");  
+    res.setHeader(  
+  "Access-Control-Allow-Headers",  
+  "Origin, X-Requested-With, Content-Type, Accept");  
+res.setHeader("Access-Control-Allow-Methods",  
+    "GET, POST, PATCH, DELETE, OPTIONS");  
     const { _id } = req.body;
 
     console.log('id ---> ', _id);
@@ -32,6 +50,12 @@ module.exports.deleteToDo = (req, res) => {
 }
 
 module.exports.updateToDo = (req, res) => {
+        res.setHeader("Access-Control-Allow-Origin", "*");  
+    res.setHeader(  
+  "Access-Control-Allow-Headers",  
+  "Origin, X-Requested-With, Content-Type, Accept");  
+res.setHeader("Access-Control-Allow-Methods",  
+    "GET, POST, PATCH, DELETE, OPTIONS");  
     const { _id, text } = req.body;
 
     ToDoModel

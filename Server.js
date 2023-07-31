@@ -10,8 +10,15 @@ const routes = require("./routes/ToDoRoute");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+app.use(cors(
+    {
+        origin: ["https://esha-mern-todo.vercel.app/"],
+        methods: ["POST","GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
-app.use(cors());
 
 mongoose
     .connect(process.env.MONGODB_URL, {

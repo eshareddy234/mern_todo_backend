@@ -12,11 +12,11 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors(
-    {
-        origin: ["https://mern-todo-app-ten.vercel.app"],
-        methods: ["POST","GET","DELETE"],
-        credentials: true
-    }
+    // {
+    //     origin: ["https://mern-todo-app-ten.vercel.app"],
+    //     methods: ["POST","GET","DELETE"],
+    //     credentials: true
+    // }
 ));
 app.use(express.json());
 
